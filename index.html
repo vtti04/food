@@ -13,26 +13,31 @@
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/general.css" />
   <link rel="stylesheet" href="/css/queries.css" />
+  <!-- Any polyfill to enable smoothscroll for the JavaScript APIs -->
+<script defer src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+
+<!-- This package, to apply the smoothscroll to anchor links -->
+<script defer src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
   <title>OmniFood</title>
 </head>
 
 <body>
-  <header class="header nav-open">
+  <header class="header ">
     <a href="#">
       <img src="/img/omnifood-logo.png" alt="OmniFood logo" class="logo" />
     </a>
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="#start">How it works</a></li>
-        <li><a class="main-nav-link" href="#">Meals</a></li>
-        <li><a class="main-nav-link" href="#">Testimonials</a></li>
-        <li><a class="main-nav-link" href="#">Pricing</a></li>
-        <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+        <li><a class="main-nav-link" href="#how">How it works</a></li>
+        <li><a class="main-nav-link" href="#meals">Meals</a></li>
+        <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
+        <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+        <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
       </ul>
     </nav>
     <button class="btn-mobile-nav">
       <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" id="close-outline" name="close-outline"></ion-icon>
     </button>
   </header>
   <main>
@@ -47,8 +52,8 @@
             eat healthy again. Tailored to your personal tastes and
             nutritional needs.
           </p>
-          <a href="#" class="btn btn--full margin-right-sm">Start eating well</a>
-          <a href="#" class="btn btn--outline">Learn more &rarr;</a>
+          <a href="#cta" class="btn btn--full margin-right-sm">Start eating well</a>
+          <a href="#how" class="btn btn--outline">Learn more &rarr;</a>
           <div class="delivered-meals">
             <div class="delivered-imgs">
               <img src="/img/customers/customer-1.jpg" alt="Customer photo" />
@@ -82,7 +87,7 @@
         </div>
       </div>
     </section>
-    <section class="section-how">
+    <section class="section-how" id="how">
       <div class="container">
         <span class="subheading">How it works</span>
         <h2 class="heading-secondary">
@@ -134,7 +139,7 @@
         </div>
       </div>
     </section>
-    <section class="section-meals">
+    <section class="section-meals" id="meals">
       <div class="container center-text">
         <span class="subheading">Meals</span>
         <h2 class="heading-secondary">
@@ -187,7 +192,7 @@
             </ul>
           </div>
         </div>
-        <div class="diets" id="start">
+        <div class="diets" >
           <h3 class="heading-tertiary">
             Works with any diet:
           </h3>
@@ -227,7 +232,7 @@
         <a href="#" class="link">See all recipes &rarr;</a>
       </div>
     </section>
-    <section class="section-testimonials">
+    <section class="section-testimonials" id="testimonials">
       <div class="testimonials-container">
         <span class="subheading">Testimonials</span>
         <h2 class="heading-secondary">
@@ -309,7 +314,7 @@
       </div>
 
     </section>
-    <section class="section-pricing">
+    <section class="section-pricing" id="pricing">
       <div class="container">
         <span class="subheading">Pricing</span>
         <h2 class="heading-secondary">
@@ -399,7 +404,7 @@
       </div>
     </section>
 
-    <section class="section-cta">
+    <section class="section-cta" id="cta">
       <div class="container">
         <div class="cta">
           <div class="cta-text-box">
@@ -446,7 +451,7 @@
           <li><a class="footer-link" href=""><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a></li>
         </ul>
 
-        <p class="copyright">Copyright &copy; 2027 by OmnyFood, Inc. all rights reserved.</p>
+        <p class="copyright">Copyright &copy; <span class="year">2027 </span> by OmnyFood, Inc. all rights reserved.</p>
       </div>
       <div class="address-col">
         <p class="footer-heading">Contact us</p>
@@ -485,6 +490,7 @@
     </div>
 
   </footer>
+  <script defer src="/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
