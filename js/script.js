@@ -34,5 +34,22 @@ allLinks.forEach(function (link) {
   });
 });
 //** Sticky navigation******/
+const sectionHeroEl = document.querySelector(".section-hero");
 
-const observer = new IntersectionObserver(function () {}, {});
+const observer = new IntersectionObserver(
+  function (entries) {
+    const entr = entries[0];
+    if (entr.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+    if (entr.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+observer.observe(sectionHeroEl);

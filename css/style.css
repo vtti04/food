@@ -65,7 +65,10 @@
 /********************************/
 /*****  Sticky Navigation  ******/
 /********************************/
-.sticky {
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+.sticky .header {
   position: fixed;
   top: 0;
   bottom: 0;

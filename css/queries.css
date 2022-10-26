@@ -103,7 +103,9 @@
     display: block;
   }
   .main-nav {
-    background-color: #fdfdfd;
+    background-color: rgba(253, 253, 253, 0.91);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
     left: 0;
